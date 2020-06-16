@@ -1,0 +1,81 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* RESET */
+
+.main-wrapper {
+  background-color: lightgrey;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.empty-bg-green {
+  background-color: green;
+  height: 100px;
+}
+
+.container {
+  width: 80%;
+  height: 95%;
+  position: absolute;
+  left: 50%;
+  top: 50%;;
+  transform: translate(-50% , -50%);
+  margin: 0 auto;
+  background-color: pink;
+}
+
+.left-bar {
+  height: 100%;
+  width: 30%;
+  overflow: auto;
+  float: left;
+}
+
+main {
+  height: 100%;
+  width: 70%;
+  background-color: coral;
+  float: right;
+  overflow: auto;
+  position: relative;
+}
+
+.account {
+  height: 70px;
+  width: 100%;
+  background-color: black;
+}
+
+.notification {
+  height: 80px;
+  width: 100%;
+  background-color: lightgreen;
+}
+
+.chat {
+  height: calc(100% - (70px + 80px));
+  width: 100%;
+  background-color: blue;
+}
+
+.profile {
+  height: 70px;
+  width: 100%;
+  background-color: lime;
+}
+
+.space {
+  background-color: white;
+  height: calc(100% - 140px);
+    overflow: auto;
+}
+
+.write {
+  height: 70px;
+  background-color: purple;
+}
