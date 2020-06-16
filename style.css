@@ -182,8 +182,32 @@ main {
   margin-left: 1%;
 }
 
+.profile span.last-seen {
+font-size: 1em;
+color: grey;
+font-weight: normal;
+}
+
 .profile .access {
   color: grey;
   font-size: 0.8em;
   font-weight: normal;
+}
+
+.footer-flex {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.audio {
+  flex-basis: 15%
+}
+
+.input-div {
+  flex-basis: 70%;
+}
+
+.emoticon {
+  flex-basis: 15%
 }
