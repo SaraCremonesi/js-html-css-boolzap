@@ -6,6 +6,16 @@
 }
 /* RESET */
 
+ul {
+  list-style-type: none;
+}
+
+i {
+  font-size: 1.4em;
+  color: grey;
+  cursor: pointer;
+}
+
 .main-wrapper {
   background-color: lightgrey;
   height: 100vh;
@@ -14,7 +24,7 @@
 }
 
 .empty-bg-green {
-  background-color: green;
+  background-color: #009688;
   height: 100px;
 }
 
@@ -26,7 +36,6 @@
   top: 50%;;
   transform: translate(-50% , -50%);
   margin: 0 auto;
-  background-color: pink;
 }
 
 .left-bar {
@@ -39,43 +48,103 @@
 main {
   height: 100%;
   width: 70%;
-  background-color: coral;
   float: right;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
 }
 
 .account {
-  height: 70px;
+  height: 77px;
   width: 100%;
-  background-color: black;
+  background-color: #ededed;
+  border-right: 0.25px solid grey;
+  padding: 0 12px;
 }
 
 .notification {
   height: 80px;
   width: 100%;
-  background-color: lightgreen;
+  background-color: lightblue;
+  padding: 0 8%;
 }
 
 .chat {
-  height: calc(100% - (70px + 80px));
+  height: calc(100% - (77px + 80px));
   width: 100%;
-  background-color: blue;
+  background-color: white;
 }
 
 .profile {
-  height: 70px;
+  height: 77px;
   width: 100%;
-  background-color: lime;
+  background-color: #ededed;
+  padding: 0 12px;
 }
 
 .space {
-  background-color: white;
-  height: calc(100% - 140px);
-    overflow: auto;
+  background-image: url('img/mine.jpg');
+  height: calc(100% - 147px);
+  width: 100%;
+  overflow: auto;
 }
 
 .write {
   height: 70px;
-  background-color: purple;
+  background-color: #ededed;
+}
+
+.avatar {
+  height: 75%;
+  line-height: 70px;
+}
+
+.avatar img {
+  height: 90%;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+.avatar ul {
+  float: right;
+  line-height: 70px;
+  margin-top: 7px;
+  width: 50%;
+  text-align: right;
+}
+
+.avatar ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.notification .bell i {
+  background-color: white;
+  padding: 18% 14%;
+  border-radius: 100%;
+  color: lightblue;
+}
+
+.bell {
+  width: 20%;
+  float: left;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.bell-text {
+  height: 100%;
+  float: right;
+  width: 80%;
+  padding-top: 25px;
+}
+
+.bell-text span {
+  font-size: 0.8em;
+  font-weight: bold;
+  display: block;
+}
+
+.bell-text a {
+  font-size: 0.9em;
+  color: grey;
 }
