@@ -282,6 +282,14 @@ main {
   border-bottom: .5px solid lightgrey
 }
 
+.chat-avatar:hover {
+  background-color: lightgrey;
+}
+
+.chat-avatar.active {
+  background-color: lightgrey;
+}
+
 .chat-image {
   height: 90%;
   flex-basis: 20%;

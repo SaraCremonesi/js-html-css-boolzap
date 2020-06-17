@@ -22,9 +22,9 @@ $(document).ready(function() {
       var currentHour = date.getHours();
       var currentMinutes = date.getMinutes();
       messageSent.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
-      $('space').append(messageSent);
+      $('.space').append(messageSent);
       // lo faccio apparire nello spazio apposito della chat aperta
-      $('space').append(messageSent);
+      $('.space').append(messageSent);
       // Svuoto la input
       $('.input-div input').val('');
     }
@@ -37,4 +37,4 @@ $(document).ready(function() {
     }
     return number;
   }
-};
+});
