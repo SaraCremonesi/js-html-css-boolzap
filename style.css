@@ -78,6 +78,7 @@ main {
   height: calc(100% - (77px + 80px + 40px));
   width: 100%;
   background-color: white;
+  overflow: auto;
 }
 
 .profile {
@@ -85,6 +86,7 @@ main {
   width: 100%;
   background-color: #ededed;
   padding: 0 12px;
+  display: flex;
 }
 
 .space {
@@ -177,21 +179,40 @@ main {
   padding: 0 1.5%;
 }
 
-.profile span {
-  font-weight: bold;
-  margin-left: 1%;
-}
-
-.profile span.last-seen {
-font-size: 1em;
-color: grey;
-font-weight: normal;
-}
-
-.profile .access {
+.profile p {
   color: grey;
-  font-size: 0.8em;
-  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.profile strong {
+  color: black;
+  font-size: 1.2em;
+}
+
+.profile .avatar {
+  flex-basis: 10%;
+}
+
+.profile .text {
+  flex-basis: 70%;
+  display: flex;
+  align-items: center;
+}
+
+.profile .option {
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.option ul {
+  width: 100%;
+  text-align: right;
+}
+
+.option ul li {
+  display: inline-block;
+  margin: 0 6%;
 }
 
 .footer-flex {
@@ -201,13 +222,92 @@ font-weight: normal;
 }
 
 .audio {
-  flex-basis: 15%
+  flex-basis: 10%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.audio i {
+  justify-content: center;
+  align-items: center;
 }
 
 .input-div {
-  flex-basis: 70%;
+  flex-basis: 80%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.input-div input {
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+  border: none;
+  padding: 0 2%;
 }
 
 .emoticon {
-  flex-basis: 15%
+  flex-basis: 10%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.emoticon i {
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-avatar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  border-bottom: .5px solid lightgrey
+}
+
+.chat-image {
+  height: 90%;
+  flex-basis: 20%;
+}
+
+.chat-text {
+  height: 100%;
+  flex-basis: 65%;
+  padding-left: 3%;
+}
+
+.chat-text p:first-child {
+  margin-top: 10%;
+  margin-left: 3%;
+  font-weight: bold;
+}
+
+.chat-text p:last-child {
+  font-size: 0.8em;
+  color: grey;
+  margin-left: 3%;
+}
+
+.chat-time {
+  height: 100%;
+  flex-basis: 15%;
+  padding-top: 3.5%;
+}
+
+.chat-image img {
+  height: 100%;
+  height: 90%;
+  border-radius: 100%;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.chat-time span {
+  font-size: 0.8em;
+  color: grey;
 }
