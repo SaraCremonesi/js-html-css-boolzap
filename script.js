@@ -2,8 +2,9 @@ $(document).ready(function() {
   $('.write input').keypress(function(){
     if (event.which == 13 || event.keyCode == 13) {
       sendMessage();
+      setTimeout(replyMessage,2000);
     };
-});
+  });
 
 // Creo una funzione per inviare i messaggi scritti nell'input della chat
   function sendMessage() {
@@ -22,7 +23,6 @@ $(document).ready(function() {
       var currentHour = date.getHours();
       var currentMinutes = date.getMinutes();
       messageSent.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
-      $('.space').append(messageSent);
       // lo faccio apparire nello spazio apposito della chat aperta
       $('.space').append(messageSent);
       // Svuoto la input
@@ -36,5 +36,20 @@ $(document).ready(function() {
       return '0' + number;
     }
     return number;
+  }
+
+  // Creo una funzione per generare una risposta automatica dopo 2 secondi dall'invio di un messaggio
+  function replyMessage() {
+    // Clono il template dove inserire la risposta,
+    var replyMessage = $('.template .message').clone();
+    // inserisco il testo della risposta automatica
+    replyMessage.children('p').text('Okay');
+    // inserisco l'ora corrente
+    var date = new Date();
+    var currentHour = date.getHours();
+    var currentMinutes = date.getMinutes();
+    replyMessage.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
+    // la faccio apparire nello spazio apposito della chat aperta
+    $('.space').append(replyMessage);
   }
 });
