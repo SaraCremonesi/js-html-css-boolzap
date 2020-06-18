@@ -27,8 +27,8 @@ $(document).ready(function() {
   $(document).on('click', '.chat-avatar',
   function() {
     $(this).siblings('.chat-avatar').removeClass('active');
-    $(this).siblings('.chat-avatar').addClass('hidden');
     $(this).addClass('active');
+    
   }
   );
 
