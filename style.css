@@ -351,7 +351,39 @@ main {
   color: grey;
 }
 
+.message i {
+  color: grey;
+  font-size: 0.9em;
+  position: absolute;
+  right: 7.5px;
+  top: 5px;
+}
+
 .sent {
   background-color: lightgreen;
   margin-left: 72%;
+}
+
+.dropdown {
+  white-space: nowrap;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background-color: white;
+  padding: 3%;
+}
+
+.dropdown ul li {
+  color: grey;
+  font-size: 0.8em;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.dropdown ul li:hover {
+  color: black;
+}
+
+.message:hover .icon {
+  display: block;
 }

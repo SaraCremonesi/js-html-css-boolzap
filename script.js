@@ -8,6 +8,13 @@ $(document).ready(function() {
 
   searchContact();
 
+  // Gestione menu a tendina messaggi
+  $(document).on('click', '.icon i',
+  function() {
+    $(this).siblings('.dropdown').removeClass('hidden');
+  }
+  );
+
 // *****************FUNCTIONS*****************
 // Creo una funzione per inviare i messaggi scritti nell'input della chat
   function sendMessage() {
