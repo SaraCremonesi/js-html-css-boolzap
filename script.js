@@ -9,9 +9,15 @@ $(document).ready(function() {
   searchContact();
 
   // Gestione menu a tendina messaggi
-  $(document).on('click', '.icon i',
+  $(document).on('click', '.icon',
   function() {
-    $(this).siblings('.dropdown').removeClass('hidden');
+    $(this).siblings('.dropdown').toggle();
+  }
+  );
+
+  $(document).on('click', '.delete',
+  function() {
+    $(this).parents('.message').addClass('hidden');
   }
   );
 
