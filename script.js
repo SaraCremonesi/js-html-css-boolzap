@@ -11,8 +11,13 @@ $(document).ready(function() {
   // Gestione menu a tendina messaggi
   $(document).on('click', '.icon',
   function() {
-    $(this).siblings('.dropdown').toggle();
-    // // TODO: far sparire il menu a tendina aperto quando clicco su un altro messaggio
+    //Controllo che il dropdown che sto esaminando sia visibile con is(':visible')
+    var visible = $(this).siblings('.dropdown').is(':visible');
+    //Chiudo tutti i dropdown (compreso quello che sto esaminando)
+    $('.icon').siblings('.dropdown').hide();
+    if (visible === false) {
+      $(this).siblings('.dropdown').show();
+    }
   }
   );
 
@@ -28,7 +33,7 @@ $(document).ready(function() {
   function() {
     $(this).siblings('.chat-avatar').removeClass('active');
     $(this).addClass('active');
-    
+
   }
   );
 

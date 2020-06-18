@@ -367,8 +367,8 @@ main {
 .dropdown {
   white-space: nowrap;
   position: absolute;
-  top: 18px;
-  right: 5px;
+  top: 20px;
+  right: 6px;
   background-color: white;
   padding: 3%;
 }
