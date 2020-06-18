@@ -12,6 +12,7 @@ $(document).ready(function() {
   $(document).on('click', '.icon',
   function() {
     $(this).siblings('.dropdown').toggle();
+    // // TODO: far sparire il menu a tendina aperto quando clicco su un altro messaggio
   }
   );
 
@@ -19,6 +20,15 @@ $(document).ready(function() {
   $(document).on('click', '.delete',
   function() {
     $(this).parents('.message').addClass('hidden');
+  }
+  );
+
+  // Gestione scelta chat
+  $(document).on('click', '.chat-avatar',
+  function() {
+    $(this).siblings('.chat-avatar').removeClass('active');
+    $(this).siblings('.chat-avatar').addClass('hidden');
+    $(this).addClass('active');
   }
   );
 
