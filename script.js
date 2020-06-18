@@ -15,6 +15,7 @@ $(document).ready(function() {
   }
   );
 
+  // Gestione eliminazine messaggi
   $(document).on('click', '.delete',
   function() {
     $(this).parents('.message').addClass('hidden');
