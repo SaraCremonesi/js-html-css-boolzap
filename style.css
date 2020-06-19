@@ -112,6 +112,14 @@ main {
   overflow: auto;
 }
 
+.window {
+  display: none;
+}
+
+.window.active {
+  display: block;
+}
+
 .write {
   height: 70px;
   background-color: #ededed;

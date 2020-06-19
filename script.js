@@ -69,7 +69,7 @@ $(document).ready(function() {
       var currentMinutes = date.getMinutes();
       messageSent.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
       // lo faccio apparire nello spazio apposito della chat aperta
-      $('.space').append(messageSent);
+      $('.window.active').append(messageSent);
       // Svuoto la input
       $('.input-div input').val('');
     }
@@ -95,7 +95,7 @@ $(document).ready(function() {
     var currentMinutes = date.getMinutes();
     replyMessage.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
     // la faccio apparire nello spazio apposito della chat aperta
-    $('.space').append(replyMessage);
+    $('.window.active').append(replyMessage);
   }
 
   // Creo una funzione per trovare il nome di un contatto nella lista delle chat
