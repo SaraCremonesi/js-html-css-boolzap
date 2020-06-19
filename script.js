@@ -70,8 +70,6 @@ $(document).ready(function() {
       messageSent.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
       // lo faccio apparire nello spazio apposito della chat aperta
       $('.space').append(messageSent);
-      var currentWindow = $('.window .active');
-      currentWindow.append(messageSent);
       // Svuoto la input
       $('.input-div input').val('');
     }
