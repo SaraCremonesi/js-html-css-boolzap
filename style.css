@@ -10,6 +10,10 @@
   display: none;
 }
 
+input {
+  outline: none;
+}
+
 ul {
   list-style-type: none;
 }
@@ -191,16 +195,6 @@ main {
   padding: 0 1.5%;
 }
 
-.profile p {
-  color: grey;
-  font-size: 0.8em;
-}
-
-.profile strong {
-  color: black;
-  font-size: 1.3em;
-}
-
 .profile .avatar {
   flex-basis: 10%;
 }
@@ -209,6 +203,10 @@ main {
   flex-basis: 70%;
   display: flex;
   align-items: center;
+}
+
+.profile p {
+  font-weight: bold;
 }
 
 .profile .option {
@@ -371,6 +369,7 @@ main {
   right: 6px;
   background-color: white;
   padding: 3%;
+  z-index: 10;
 }
 
 .dropdown ul li {

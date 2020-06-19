@@ -31,9 +31,22 @@ $(document).ready(function() {
   // Gestione scelta chat
   $(document).on('click', '.chat-avatar',
   function() {
+
+    // gestione classe active su chat attiva
     $(this).siblings('.chat-avatar').removeClass('active');
     $(this).addClass('active');
 
+    //?
+    $('.window').removeClass('active');
+    var contact = $(this).attr('data-chat');
+    $('.window[data-window="' + contact + '"]').addClass('active');
+
+    // gestione del cambio di immagine e nome dell'avatar nel profilo in alto in base alla chat rispettiva selezionata
+    var contactName = $(this).find('p:first-child').text();
+    var contactImage = $(this).find('img').attr('src');
+    var current = $('.current');
+    current.find('p:first-child').text(contactName);
+    current.find('img').attr('src', contactImage);
   }
   );
 
@@ -46,9 +59,9 @@ $(document).ready(function() {
     if (messageValue != '') {
       // clono il template precedentemente copiato nell'html
       var messageSent = $('.template .message').clone();
-      // scrivo il messaggio nel mio paragrafo
+      // scrivo il valore del messaggio letto nel mio paragrafo
       messageSent.children('p').text(messageValue);
-      // gli aggiungo la classe per contrassegnare che è stato inviato
+      // gli aggiungo la classe per contrassegnare che fa parte dei messaggi inviati (quelli verdi)
       messageSent.addClass('sent');
       // inserisco l'ora corrente
       var date = new Date();
@@ -57,6 +70,8 @@ $(document).ready(function() {
       messageSent.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
       // lo faccio apparire nello spazio apposito della chat aperta
       $('.space').append(messageSent);
+      var currentWindow = $('.window .active');
+      currentWindow.append(messageSent);
       // Svuoto la input
       $('.input-div input').val('');
     }
