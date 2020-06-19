@@ -36,7 +36,7 @@ $(document).ready(function() {
     $(this).siblings('.chat-avatar').removeClass('active');
     $(this).addClass('active');
 
-    //?
+    // Gestione del cambio di schermata in base alla chat corrispondente selezionata
     $('.window').removeClass('active');
     var contact = $(this).attr('data-chat');
     $('.window[data-window="' + contact + '"]').addClass('active');
