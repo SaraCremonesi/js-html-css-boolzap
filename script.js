@@ -125,9 +125,13 @@ $(document).ready(function() {
 
   // Creo una funzione per far apparire la finestra della chat rispettiva al contatto selezionato
   function showSelectedChat(elementIndex) {
+
+    // rimuovo la classe active dalle chat correnti
     $('.window.active').removeClass('active');
     $('.chat-avatar.active').removeClass('active');
 
+    // utilizzo la funzione eq per trovare gli elementi che hanno indice corrente,
+    // e poi gli assegno la classe active
     $('.window').eq(elementIndex).addClass('active');
     $('.chat-avatar').eq(elementIndex).addClass('active');
   };

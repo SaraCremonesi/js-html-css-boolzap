@@ -6,6 +6,7 @@
 }
 /* RESET */
 
+/* GENERALS */
 .template {
   display: none;
 }
@@ -31,7 +32,9 @@ i {
 .active {
   display: block;
 }
+/* GENERALS */
 
+/* CONTENITORE APP */
 .main-wrapper {
   background-color: lightgrey;
   height: 100vh;
@@ -53,7 +56,9 @@ i {
   transform: translate(-50% , -50%);
   margin: 0 auto;
 }
+/* CONTENITORE APP */
 
+/* LAYOUT */
 .left-bar {
   height: 100%;
   width: 30%;
@@ -112,6 +117,13 @@ main {
   overflow: auto;
 }
 
+.write {
+  height: 70px;
+  background-color: #ededed;
+}
+/* LAYOUT */
+
+/* FINESTRE */
 .window {
   display: none;
 }
@@ -119,12 +131,9 @@ main {
 .window.active {
   display: block;
 }
+/* FINESTRE */
 
-.write {
-  height: 70px;
-  background-color: #ededed;
-}
-
+/* ACCOUNT PERSONALE */
 .avatar {
   height: 75%;
   line-height: 70px;
@@ -148,7 +157,9 @@ main {
   display: inline-block;
   margin: 0 10px;
 }
+/* ACCOUNT PERSONALE*/
 
+/* ATTIVA NOTIFICHE DESKTOP */
 .notification .bell i {
   background-color: white;
   padding: 18% 14%;
@@ -180,7 +191,9 @@ main {
   font-size: 0.9em;
   color: grey;
 }
+/* ATTIVA NOTIFICHE DESKTOP */
 
+/* SEARCH BAR */
 .search-bar {
   width: 100%;
   height: 70%;
@@ -202,7 +215,9 @@ main {
   vertical-align: middle;
   padding: 0 1.5%;
 }
+/* SEARCH BAR */
 
+/* PROFILO CONTATTO CHAT CORRENTE */
 .profile .avatar {
   flex-basis: 10%;
 }
@@ -232,7 +247,9 @@ main {
   display: inline-block;
   margin: 0 6%;
 }
+/* PROFILO CONTATTO CHAT CORRENTE */
 
+/* SEZIONE INPUT CHAT */
 .footer-flex {
   display: flex;
   height: 100%;
@@ -280,7 +297,9 @@ main {
   justify-content: center;
   align-items: center;
 }
+/* SEZIONE INPUT CHAT */
 
+/* SEZIONE CONTATTI LEFT BAR */
 .chat-avatar {
   height: 70px;
   width: 100%;
@@ -337,7 +356,9 @@ main {
   font-size: 0.8em;
   color: grey;
 }
+/* SEZIONE CONTATTI LEFT BAR */
 
+/* MESSAGGI INVIATI E RICEVUTI */
 .message {
   background-color: white;
   border-radius: 7px;
@@ -394,3 +415,4 @@ main {
 .message:hover .icon {
   display: block;
 }
+/* MESSAGGI INVIATI E RICEVUTI */
