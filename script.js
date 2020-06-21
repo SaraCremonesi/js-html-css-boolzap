@@ -31,22 +31,29 @@ $(document).ready(function() {
   // Gestione scelta chat
   $(document).on('click', '.chat-avatar',
   function() {
+    // Isolo l'indice delle chat/finestre in una variabile da passare come argomento alla mia funzione
+    var chatIndex = $(this).index();
+    showSelectedChat(chatIndex);
 
-    // gestione classe active su chat attiva
-    $(this).siblings('.chat-avatar').removeClass('active');
-    $(this).addClass('active');
-
-    // Gestione del cambio di schermata in base alla chat corrispondente selezionata
-    $('.window').removeClass('active');
-    var contact = $(this).attr('data-chat');
-    $('.window[data-window="' + contact + '"]').addClass('active');
-
-    // gestione del cambio di immagine e nome dell'avatar nel profilo in alto in base alla chat rispettiva selezionata
+    //Gestione del cambio di immagine e nome dell'avatar nel profilo in alto in base alla chat selezionata
+    // isolo il nome e l'immagine del contatto corrente in due variabili, per il nome (che è un testo) utilizzo
+    // la funzione .text() , mentre per l'immagine utilizzo la funzione .attr() passandogli come argomento
+    // l'attributo che collega il percorso della mia immagine (ovvero src)
     var contactName = $(this).find('p:first-child').text();
     var contactImage = $(this).find('img').attr('src');
-    var current = $('.current');
-    current.find('p:first-child').text(contactName);
-    current.find('img').attr('src', contactImage);
+
+    // inserisco le mie variabili in scrittura per poterle sostituire alle chat correnti
+    $('.current').find('p:first-child').text(contactName);
+    $('.current').find('img').attr('src', contactImage);
+  });
+
+    // gestione del cambio di immagine e nome dell'avatar nel profilo in alto in base alla chat rispettiva selezionata
+    // var contactName = $(this).find('p:first-child').text();
+    // var contactImage = $(this).find('img').attr('src');
+    // var current = $('.current');
+    // current.find('p:first-child').text(contactName);
+    // current.find('img').attr('src', contactImage);
+
   }
   );
 
@@ -115,4 +122,12 @@ $(document).ready(function() {
     });
   });
 };
-});
+
+  // Creo una funzione per far apparire la finestra della chat rispettiva al contatto selezionato
+  function showSelectedChat(elementIndex) {
+    $('.window.active').removeClass('active');
+    $('.chat-avatar.active').removeClass('active');
+
+    $('.window').eq(elementIndex).addClass('active');
+    $('.chat-avatar').eq(elementIndex).addClass('active');
+  };
