@@ -17,16 +17,14 @@ $(document).ready(function() {
     $('.icon').siblings('.dropdown').hide();
     if (visible === false) {
       $(this).siblings('.dropdown').show();
-    }
-  }
-  );
+    };
+  });
 
   // Gestione eliminazine messaggi
   $(document).on('click', '.delete',
   function() {
     $(this).parents('.message').addClass('hidden');
-  }
-  );
+  });
 
   // Gestione scelta chat
   $(document).on('click', '.chat-avatar',
@@ -46,16 +44,7 @@ $(document).ready(function() {
     $('.current').find('p:first-child').text(contactName);
     $('.current').find('img').attr('src', contactImage);
   });
-
-    // gestione del cambio di immagine e nome dell'avatar nel profilo in alto in base alla chat rispettiva selezionata
-    // var contactName = $(this).find('p:first-child').text();
-    // var contactImage = $(this).find('img').attr('src');
-    // var current = $('.current');
-    // current.find('p:first-child').text(contactName);
-    // current.find('img').attr('src', contactImage);
-
-  }
-  );
+});
 
 // *****************FUNCTIONS*****************
 // Creo una funzione per inviare i messaggi scritti nell'input della chat
@@ -79,16 +68,16 @@ $(document).ready(function() {
       $('.window.active').append(messageSent);
       // Svuoto la input
       $('.input-div input').val('');
-    }
-  }
+    };
+  };
 
   // Creo una funzione per aggiungere lo 0 davanti ai minuti o le ore se sono minori di 10
   function addZero(number) {
     if (number < 10) {
       return '0' + number;
-    }
+    };
     return number;
-  }
+  };
 
   // Creo una funzione per generare una risposta automatica dopo 2 secondi dall'invio di un messaggio
   function replyMessage() {
@@ -103,7 +92,7 @@ $(document).ready(function() {
     replyMessage.children('span').text(addZero(currentHour) + '.' + addZero(currentMinutes));
     // la faccio apparire nello spazio apposito della chat aperta
     $('.window.active').append(replyMessage);
-  }
+  };
 
   // Creo una funzione per trovare il nome di un contatto nella lista delle chat
   function searchContact() {
