@@ -1,12 +1,19 @@
 $(document).ready(function() {
-  $('.write input').on('keypress', function(){
+
+  // Gestione invio dei messaggi e risposta automatica dopo 1 secondo
+  $(document).on('keypress', '.write input',
+  function() {
     if (event.which == 13 || event.keyCode == 13) {
       sendMessage();
       setTimeout(replyMessage,1000);
     };
   });
 
-  searchContact();
+  // Gestione ricerca contatti
+  $(document).on('keyup', '.search input',
+    function() {
+      searchContact();
+    });
 
   // Gestione menu a tendina messaggi
   $(document).on('click', '.icon',
@@ -96,8 +103,6 @@ $(document).ready(function() {
 
   // Creo una funzione per trovare il nome di un contatto nella lista delle chat
   function searchContact() {
-    //Intercetto i tasti cliccati con keyup
-    $('.search input').keyup(function() {
     // Inserisco il valore dell'input cercato in una variabile e trasformo tutto in minuscolo (per una migliore esperienza utente)
     var searched = $('.search input').val().toLowerCase();
     // Controllo per ogni nome nelle chat se contengono l'input cercato
@@ -109,8 +114,7 @@ $(document).ready(function() {
         $(this).hide();
       };
     });
-  });
-};
+  };
 
   // Creo una funzione per far apparire la finestra della chat rispettiva al contatto selezionato
   function showSelectedChat(elementIndex) {
